@@ -1,0 +1,147 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Montserrat';
+  font-size: 1.2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  background-color: #1C1A58;
+  overflow: hidden;
+}
+
+.top, .bottom {
+  flex: 1;
+}
+
+.top {
+  background-color: #AEAED4;
+  opacity: 0%;
+}
+
+.bottom {
+  background-color: #A9CCD1;
+  opacity: 0%;
+}
+
+.line {
+    position: absolute;
+    width: 100vw;
+    height: 0.3%;
+    background-color: #FF0069;
+    transform-origin: 100% 50%;
+    top: 50%;
+    right: 50%;
+
+}
+
+#refractedLine, #reflectedLine {
+    transform-origin: 0% 50%;
+    left: 50%;
+}
+
+.slider-container {
+  margin-bottom: 1rem; 
+}
+
+.controls {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  background-color: white;
+  opacity: 90%;
+  border-radius: 2rem;
+  padding: 1.5rem; 
+  padding-bottom: 1rem;
+}
+
+
+
+.slider-container label,
+.slider-container input,
+.slider-container p {
+  margin: 0.2rem 0; 
+}
+
+.checkbox-container {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 13rem;
+  height: 2.5rem;
+  background-color: white;
+  opacity: 90%;
+  color: black;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding: 1rem;
+}
+
+.line-container {
+  width: 15rem;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  transition-delay: 0.3s;
+  background-color: white;
+  opacity: 90%;
+  position: fixed;
+  top: 6.5rem;
+  right: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.polar-line {
+  position: relative;
+  width: 90%;
+  height: 1%;
+  background-color: #FF0069;
+  transform-origin: 50% 50%;
+  top: 50%;
+  left: 5.5%;
+  z-index: 1;
+}
+
+.axis-y,
+.axis-x {
+  position: absolute;
+  background-color: black;
+  text-align: right;
+}
+
+.axis-x {
+  width: 90%;
+  height: 0.5%;
+  top: 50%;
+  left: 5%;
+}
+
+.axis-y {
+  height: 90%;
+  width: 0.5%;
+  left: 50%;
+  top: 5%;
+}
+
+#axis-x-label, #axis-y-label {
+  color: black;
+  position: absolute;
+}
+
+#axis-x-label {
+  top: -5%;
+  left: 52%;
+}
+
+#axis-y-label {
+  top: 44%;
+  left: 90%;
+}

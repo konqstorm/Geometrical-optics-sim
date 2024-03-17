@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotating stick</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div id="top" class="top"></div>
+      <div id="bottom" class="bottom"></div>
+      <div id="line" class="line"></div>
+      <div id="refractedLine" class="line"></div>
+      <div id="reflectedLine" class="line"></div>
+    </div>
+
+    <div class="controls">
+      <div class="slider-container">
+        <!-- <label for="sliderTop">n1</label> -->
+        <input
+          type="range"
+          id="sliderTop"
+          min="0"
+          max="1"
+          step="0.01"
+          value="0"
+        />
+        <p id="outputTop"></p>
+      </div>
+      <div class="slider-container">
+        <!-- <label for="sliderBottom">n2</label> -->
+        <input
+          type="range"
+          id="sliderBottom"
+          min="0"
+          max="1"
+          step="0.01"
+          value="0"
+        />
+        <p id="outputBottom"></p>
+      </div>
+    </div>
+
+    <div class="checkbox-container" id="checkbox-container">
+      <input type="checkbox" id="enablePolarization">
+      <label for="enablePolarization">Enable polarization</label>
+    </div>
+    <div id="lineContainer" class="line-container">
+      <div id="polarLine" class="polar-line"></div>
+      <div class="axis-y"></div>
+      <div class="axis-x"></div>
+      <p id="axis-y-label">S</p>
+      <p id="axis-x-label">P</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
